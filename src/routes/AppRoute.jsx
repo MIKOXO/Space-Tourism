@@ -25,35 +25,36 @@ const AppRoute = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainLayout />} />
-        <Route index element={<Homepage />} />
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Homepage />} />
 
-        {/* Destination Pages */}
-        <Route path="/destination">
-          <Route index element={<Moon />} />
-          <Route path="moon" element={<Moon />} />
-          <Route path="mars" element={<Mars />} />
-          <Route path="europa" element={<Europa />} />
-          <Route path="titan" element={<Titan />} />
+          {/* Destination Pages */}
+          <Route path="/destination">
+            <Route index element={<Moon />} />
+            <Route path="moon" element={<Moon />} />
+            <Route path="mars" element={<Mars />} />
+            <Route path="europa" element={<Europa />} />
+            <Route path="titan" element={<Titan />} />
+          </Route>
+
+          {/* Crew Pages */}
+          <Route path="/crew">
+            <Route path="crew-A" element={<CrewA />} />
+            <Route path="crew-B" element={<CrewB />} />
+            <Route path="crew-C" element={<CrewC />} />
+            <Route path="crew-D" element={<CrewD />} />
+          </Route>
+
+          {/* Technology Pages */}
+          <Route path="/technology">
+            <Route path="tech-A" element={<TechA />} />
+            <Route path="tech-B" element={<TechB />} />
+            <Route path="tech-C" element={<TechC />} />
+          </Route>
+
+          {/* Not Found Page */}
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
-
-        {/* Crew Pages */}
-        <Route path="/crew">
-          <Route path="crew-A" element={<CrewA />} />
-          <Route path="crew-B" element={<CrewB />} />
-          <Route path="crew-C" element={<CrewC />} />
-          <Route path="crew-D" element={<CrewD />} />
-        </Route>
-
-        {/* Technology Pages */}
-        <Route path="/technology">
-          <Route path="tech-A" element={<TechA />} />
-          <Route path="tech-B" element={<TechB />} />
-          <Route path="tech-C" element={<TechC />} />
-        </Route>
-
-        {/* Not Found Page */}
-        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
