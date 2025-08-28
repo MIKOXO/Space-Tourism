@@ -41,12 +41,14 @@ body {
 @media (max-width: 1024px) {
   .home {
     background-image: url("./assets/home/background-home-tablet.jpg");
+    height: 130vh;
   }
 }
 
 @media (max-width: 640px) {
   .home {
     background-image: url("./assets/home/background-home-mobile.jpg");
+    height: 130vh;
   }
 }
 
