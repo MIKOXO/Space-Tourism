@@ -52,6 +52,29 @@ body {
   }
 }
 
+.destination {
+  background-image: url("./assets/destination/background-destination-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
+  .destination {
+    background-image: url("./assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+@media (max-width: 640px) {
+  .destination {
+    background-image: url("./assets/destination/background-destination-mobile.jpg");
+  }
+}
+
 /* Additional overflow prevention for very small screens */
 @media (max-width: 480px) {
   body {
