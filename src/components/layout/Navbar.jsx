@@ -39,7 +39,7 @@ const Navbar = () => {
               <NavLink to="crew/crew-A" className={LinkClass}>
                 <span className="font-semibold mr-2"> 02</span> Crew
               </NavLink>
-              <NavLink to="tech-tech-A" className={LinkClass}>
+              <NavLink to="technology/tech-A" className={LinkClass}>
                 <span className="font-semibold mr-2"> 03</span> Technology
               </NavLink>
             </div>
@@ -114,7 +114,10 @@ const Navbar = () => {
                 <NavLink to="crew/crew-A" onClick={() => setIsOpen(false)}>
                   <span className="font-semibold mr-2"> 02</span> Crew
                 </NavLink>
-                <NavLink to="tech-tech-A" onClick={() => setIsOpen(false)}>
+                <NavLink
+                  to="technology/tech-A"
+                  onClick={() => setIsOpen(false)}
+                >
                   <span className="font-semibold mr-2"> 03</span> Technology
                 </NavLink>
               </div>
