@@ -1,12 +1,28 @@
-# React + Vite
+# Space Tourism Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a responsive website for a fictional space tourism company. The website is built using React and Vite. The website is designed to be viewed on both desktop and mobile devices. The website is also fully accessible.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive design
+- Fully accessible
+- Smooth animations
+- Interactive elements
+- Optimized for performance
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Tailwind CSS
+
+## Run Locally
+
+```bash
+git clone https://github.com/MIKOXO/space-tourism.git
+
+cd space-tourism
+
+npm install
+
+npm run dev
+```
