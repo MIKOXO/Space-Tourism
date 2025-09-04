@@ -1,17 +1,30 @@
 import React, { useState } from "react";
 import Logo from "../../assets/shared/logo.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import clsx from "clsx";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const location = useLocation();
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const LinkClass = ({ isActive }) =>
-    `relative pb-9 transition-all duration-300
-   after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
-   ${isActive ? "text-white after:w-full" : "after:w-0 hover:after:w-full"}`;
+  const LinkClass = ({ isActive, section }) => {
+    const path = location.pathname;
+
+    const isParentActive =
+      (section === "destination" && path.startsWith("/destination")) ||
+      (section === "crew" && path.startsWith("/crew")) ||
+      (section === "technology" && path.startsWith("/technology"));
+
+    return `relative pb-9 transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+   ${
+     isParentActive || isActive
+       ? "text-white after:w-full"
+       : "after:w-0 hover:after:w-full"
+   }`;
+  };
 
   return (
     <header className="absolute top-0 left-0 right-0 z-40">
@@ -33,13 +46,28 @@ const Navbar = () => {
               <NavLink to="/" className={LinkClass}>
                 <span className="font-semibold mr-2"> 00</span> Home
               </NavLink>
-              <NavLink to="/destination/moon" className={LinkClass}>
+              <NavLink
+                to="/destination/moon"
+                className={({ isActive }) =>
+                  LinkClass({ isActive, section: "destination" })
+                }
+              >
                 <span className="font-semibold mr-2"> 01</span> Destination
               </NavLink>
-              <NavLink to="crew/crew-A" className={LinkClass}>
+              <NavLink
+                to="crew/crew-A"
+                className={({ isActive }) =>
+                  LinkClass({ isActive, section: "crew" })
+                }
+              >
                 <span className="font-semibold mr-2"> 02</span> Crew
               </NavLink>
-              <NavLink to="technology/tech-A" className={LinkClass}>
+              <NavLink
+                to="technology/tech-A"
+                className={({ isActive }) =>
+                  LinkClass({ isActive, section: "technology" })
+                }
+              >
                 <span className="font-semibold mr-2"> 03</span> Technology
               </NavLink>
             </div>
