@@ -20,10 +20,10 @@ const CrewD = () => {
 
         <section className="mt-5 pt-10 lg:pt-0 lg:ml-16 flex flex-col lg:flex-row items-center gap-10">
           <div className="pt-6 text-center lg:text-left lg:w-[50%]">
-            <span className="text-white opacity-50 text-[32px] uppercase font-Bellefair">
+            <span className="text-white opacity-50 text-[24px] uppercase font-Bellefair">
               Flight Engineer
             </span>
-            <h1 className="text-white text-[38px] sm:text-[56px] uppercase font-Bellefair">
+            <h1 className="text-white text-[32px] sm:text-[56px] uppercase font-Bellefair">
               Anousheh Ansari
             </h1>
             <p className="text-Blue300 font-Barlow text-[18px] lg:max-w-[70%] xl:max-w-[90%]">
